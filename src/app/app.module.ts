@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -25,6 +26,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
+    NoopAnimationsModule,
     
   ],
   providers: [TranslateService],

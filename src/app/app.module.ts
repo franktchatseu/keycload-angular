@@ -7,13 +7,19 @@ import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { CarnetComponent } from './components/carnet/carnet.component';
+import { ClientComponent } from './components/client/client.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarnetComponent,
+    ClientComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

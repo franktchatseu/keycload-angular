@@ -1,1 +1,24 @@
-<p>carnet works!</p>
+<div class="container" *ngIf="errorMessage!=null">
+   <span style="color: red; font-weight: bold;"> {{errorMessage}}</span> 
+</div>
+
+
+<div class="container" *ngIf="errorMessage==null">
+    <table class="table table-hover">
+        <caption>Lists of Clients</caption>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Ville</th>
+            <th>Telephone</th>
+        </thead>
+        <tbody>
+           <tr *ngFor="let client of clients,let index=index">
+                <td>{{index}}</td>
+                <td>{{client.nom_client}}</td>
+                <td>{{client.ville_client}}</td>
+                <td>{{client.tel_client}}</td>
+           </tr>
+        </tbody>
+    </table>
+</div>

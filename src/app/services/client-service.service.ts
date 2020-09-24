@@ -13,6 +13,6 @@ export class ClientServiceService {
   ) { }
 
   getClients(){
-    return this.http.get("http://localhost:8080/clients",{headers: new HttpHeaders({Authorization:'Bearer '+ this.keycloackService.kc.token})});
+    return this.http.get("http://localhost:8080/clients");
   }
 }

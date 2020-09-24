@@ -16,7 +16,7 @@
           <span class="caret"></span></a>
           <ul  *ngIf="this.keyclockServive.kc.authenticated"  class="dropdown-menu">
             <li (click)="onLogout()"><a class="nav-link" style="cursor: pointer;"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
-            <li (click)="onLogout()"><a class="nav-link" style="cursor: pointer;"><span class="glyphicon glyphicon-transfer"></span> Change Password</a></li>
+            <li (click)="onChangePassword()"><a class="nav-link" style="cursor: pointer;"><span class="glyphicon glyphicon-transfer"></span> Change Password</a></li>
           </ul>
           <ul *ngIf="!this.keyclockServive.kc.authenticated" class="dropdown-menu">
             <li ><a href="#"><span class="glyphicon glyphicon-user" style="cursor: pointer;"></span> Sign Up</a></li>

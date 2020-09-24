@@ -8,18 +8,19 @@ import { ClientServiceService } from 'src/app/services/client-service.service';
 })
 export class CarnetComponent implements OnInit {
   clients: any;
+  errorMessage: any = null;
   constructor(
     private clientService: ClientServiceService
   ) { }
 
   ngOnInit() {
     this.clientService.getClients().subscribe(
-      (data) =>{
-        this.clients = data;
-        console.log(this.clients)
+      (data : any) =>{
+        this.clients = data._embedded.clients;
       },
       (error) =>{
-        console.log(error);
+        this.errorMessage = error.error.message;
+        console.log(this.errorMessage);
       }
     )
   }

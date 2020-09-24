@@ -18,7 +18,12 @@ export class NavBarComponent implements OnInit {
   onLogout(){
     this.keyclockServive.kc.logout();
   }
+  
   onLogin(){
     this.keyclockServive.kc.login();
+  }
+  
+  onChangePassword(){
+    this.keyclockServive.kc.accountManagement();
   }
 }

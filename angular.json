@@ -8,7 +8,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "inlineStyle": true,
-          "style": "scss"
+          "styleext": "scss"
         }
       },
       "root": "",
@@ -35,7 +35,8 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/keycloak-js/dist/keycloak.min.js"
+              "node_modules/keycloak-js/dist/keycloak.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -133,5 +134,10 @@
       }
     }
   },
-  "defaultProject": "quickUpdateAngular"
+  "defaultProject": "quickUpdateAngular",
+  "schematics": {
+    "@nrwl/schematics:component": {
+      "styleext": "scss"
+    }
+  }
 }

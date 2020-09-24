@@ -25,7 +25,7 @@ export function kcFactory(keycloakSecurity: KeycloakSecurityService){
     AppComponent,
     CarnetComponent,
     ClientComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

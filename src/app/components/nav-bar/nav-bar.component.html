@@ -4,9 +4,16 @@
         <a class="navbar-brand" href="#">Quick Update</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a routerLink="/client">Client</a></li>
-        <li><a routerLink="/carnet">Carnet</a></li>
-        <li><a href="#">Language</a></li>
+        <li class="active"><a routerLink="/client">{{ 'NavBar.ClientMenu' | translate }}</a></li>
+        <li><a routerLink="/carnet">{{ 'NavBar.CarnetMenu' | translate }}</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ 'NavBar.ChangeLang' | translate }}
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li  (click)="setInFrench()"><a >{{ 'NavBar.FrenchLang' | translate }}</a></li>
+            <li (click)="setInEnglish()"><a >{{ 'NavBar.EnglishLang' | translate }}</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -15,12 +22,12 @@
             <span *ngIf="!this.keyclockServive.kc.authenticated">Account</span>
           <span class="caret"></span></a>
           <ul  *ngIf="this.keyclockServive.kc.authenticated"  class="dropdown-menu">
-            <li (click)="onLogout()"><a class="nav-link" style="cursor: pointer;"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
-            <li (click)="onChangePassword()"><a class="nav-link" style="cursor: pointer;"><span class="glyphicon glyphicon-transfer"></span> Change Password</a></li>
+            <li (click)="onLogout()"><a class="nav-link" style="cursor: pointer;"><span class="glyphicon glyphicon-off"></span> {{ 'Account.Logout' | translate }}</a></li>
+            <li (click)="onChangePassword()"><a class="nav-link" style="cursor: pointer;"><span class="glyphicon glyphicon-transfer"></span> {{ 'Account.Password' | translate }}</a></li>
           </ul>
           <ul *ngIf="!this.keyclockServive.kc.authenticated" class="dropdown-menu">
-            <li ><a href="#"><span class="glyphicon glyphicon-user" style="cursor: pointer;"></span> Sign Up</a></li>
-            <li (click)="onLogin()"><a href="#" style="cursor: pointer;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li ><a href="#"><span class="glyphicon glyphicon-user" style="cursor: pointer;"></span> {{ 'Account.SignUp' | translate }}</a></li>
+            <li (click)="onLogin()"><a href="#" style="cursor: pointer;"><span class="glyphicon glyphicon-log-in"></span> {{ 'Account.Login' | translate }}</a></li>
           </ul>
         </li>
       </ul>

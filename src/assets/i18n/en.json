@@ -1,3 +1,29 @@
 {
-    "TITLE": "Welcome"
+    "TITLE": "Bienvenue",
+    "NavBar": {
+        "ClientMenu": "Customer",
+        "CarnetMenu": "Carnet",
+        "ChangeLang": "Change Language",
+        "FrenchLang": "French",
+        "EnglishLang": "English"
+    },
+    "Account": {
+        "Login": "Login",
+        "SignUp": "SignUp",
+        "Logout": "Logout",
+        "Password": "Change Password"
+    },
+    "Client": {
+        "Add": "New Customer",
+        "Edit": "Edit Customer",
+        "List": "List of Customers",
+        "IdLAbel": "Id",
+        "NameLabel": "Name",
+        "PhoneLabel": "Phone",
+        "TownLabel": "Town"
+    },
+    "Pagination":{
+        "Next": "Next",
+        "Previous": "Previous"
+    }
 }

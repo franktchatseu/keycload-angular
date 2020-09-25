@@ -1,3 +1,29 @@
 {
-    "TITLE": "Bienvenue"
+    "TITLE": "Bienvenue",
+    "NavBar": {
+        "ClientMenu": "Client",
+        "CarnetMenu": "Carnet",
+        "ChangeLang": "Changer de Langue",
+        "FrenchLang": "Francais",
+        "EnglishLang": "Anglais"
+    },
+    "Account": {
+        "Login": "Connection",
+        "SignUp": "S'inscrire",
+        "Logout": "Deconnection",
+        "Password": "Changer votre mot de passe"
+    },
+    "Client": {
+        "Add": "Nouveau Client",
+        "Edit": "Editer le Client",
+        "List": "Liste des Clients",
+        "IdLAbel": "Id",
+        "NameLabel": "Nom",
+        "PhoneLabel": "Telephone",
+        "TownLabel": "Ville"
+    },
+    "Pagination":{
+        "Next": "Suivant",
+        "Previous": "Precedent"
+    }
 }
